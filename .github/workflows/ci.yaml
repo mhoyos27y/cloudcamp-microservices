@@ -28,6 +28,7 @@ jobs:
         run: |
           ./gradlew bootJar
           ls build/libs
+          terraform plan
 
       - name: deploy-jar
         if: ${{ github.event_name == 'push' }}
